@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GithubSearchApp</string>
+
+    <string name="client_id">your app client id</string>
+    <string name="client_secret">your app client secret</string>
+
+    <string name="redirect_uri">hase://app</string>
+</resources>
