@@ -23,6 +23,10 @@ public class GithubClient {
         return service.search(query, sortType, accessToken);
     }
 
+    public Observable<Repositories> searchRepository(String query) {
+        return service.search(query, accessToken);
+    }
+
     public static void setAccessToken(String token) {
         accessToken = token;
     }

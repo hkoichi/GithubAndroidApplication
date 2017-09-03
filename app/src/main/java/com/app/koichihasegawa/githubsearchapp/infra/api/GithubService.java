@@ -18,5 +18,5 @@ public interface GithubService {
 
     @GET("/search/repositories")
     Observable<Repositories> search(@Query("q") String q,
-                                    @Query("sort") String sortType);
+                                    @Query("access_token") String accessToken);
 }

@@ -19,8 +19,12 @@ public class SearchRepository {
         this.client = client;
     }
 
-    public Observable<Repositories> getRepositoies(String query, String sortType) {
+    public Observable<Repositories> getRepositories(String query, String sortType) {
         return client.searchRepository(query, sortType);
+    }
+
+    public Observable<Repositories> getRepositories(String query) {
+        return client.searchRepository(query);
     }
 
     public void setAccessToken(String accessToken) {
