@@ -1,7 +1,6 @@
 package com.app.koichihasegawa.githubsearchapp.presentation.login;
 
 import android.content.Context;
-import android.widget.Toast;
 
 import com.app.koichihasegawa.githubsearchapp.R;
 import com.app.koichihasegawa.githubsearchapp.domain.entity.AccessToken;
@@ -34,9 +33,9 @@ public class LoginPresenter {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<AccessToken>() {
+                    // ラムダ式に変更する
                     @Override
                     public void onSubscribe(Disposable d) {
-                        Toast.makeText(context,"subscribe",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -46,12 +45,10 @@ public class LoginPresenter {
 
                     @Override
                     public void onError(Throwable e) {
-                        Toast.makeText(context,"onError",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onComplete() {
-                        Toast.makeText(context,"onComplete",Toast.LENGTH_SHORT).show();
                     }
                 });
     }
