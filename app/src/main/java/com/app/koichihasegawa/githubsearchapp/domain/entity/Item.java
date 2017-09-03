@@ -1,5 +1,9 @@
 package com.app.koichihasegawa.githubsearchapp.domain.entity;
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
+
+import com.app.koichihasegawa.githubsearchapp.BR;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -7,7 +11,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by koichihasegawa on 2017/08/31.
  */
 
-public class Item {
+public class Item extends BaseObservable {
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -83,12 +87,14 @@ public class Item {
         this.id = id;
     }
 
+    @Bindable
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+        notifyPropertyChanged(BR.name);
     }
 
     public String getFullName() {
@@ -123,12 +129,14 @@ public class Item {
         this.htmlUrl = htmlUrl;
     }
 
+    @Bindable
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
+        notifyPropertyChanged(BR.description);
     }
 
     public Boolean getFork() {
@@ -139,12 +147,14 @@ public class Item {
         this.fork = fork;
     }
 
+    @Bindable
     public String getUrl() {
         return url;
     }
 
     public void setUrl(String url) {
         this.url = url;
+        notifyPropertyChanged(BR.url);
     }
 
     public String getCreatedAt() {
@@ -203,12 +213,14 @@ public class Item {
         this.watchersCount = watchersCount;
     }
 
+    @Bindable
     public String getLanguage() {
         return language;
     }
 
     public void setLanguage(String language) {
         this.language = language;
+        notifyPropertyChanged(BR.language);
     }
 
     public Integer getForksCount() {
