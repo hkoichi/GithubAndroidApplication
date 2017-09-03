@@ -3,8 +3,6 @@ package com.app.koichihasegawa.githubsearchapp.domain.entity;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.security.acl.Owner;
-
 /**
  * Created by koichihasegawa on 2017/08/31.
  */
