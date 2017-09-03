@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
             // AccessCode取得のためのインテント
             Intent intent = new Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse(getString(R.string.oauth_base_url) +
+                    Uri.parse("https://github.com/login/oauth/authorize" +
                             "?client_id=" + getString(R.string.client_id) +
                             "&redirect_uri=" + redirectUri
                     )
